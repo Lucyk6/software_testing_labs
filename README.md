@@ -14,7 +14,7 @@ This repository covers all major testing methodologies — from manual debugging
 * **Assertions:** Fluent Assertions
 * **Code Coverage:** AxoCover, OpenCover
 * **Mutation Testing:** Stryker.NET
-* **IDE:** Visual Studio, JetBrains Rider, VS Code
+* **IDE:**  VS Code
 
 ---
 
