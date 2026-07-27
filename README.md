@@ -45,8 +45,9 @@ Clone the repository and run the following commands inside any lab folder:
 ```bash
 dotnet restore
 dotnet test
-📁 Repository Structure
-text
+## 📁 Repository Structure
+
+```
 software-testing-labs/
 ├── Lab01-Debugging/          # IDE debugging skills
 ├── Lab02-BlackBox/           # Black-box testing
@@ -60,7 +61,7 @@ software-testing-labs/
 ├── Lab10-DebugTrace/         # Debug & Trace classes
 ├── Lab11-MutationTesting/    # Mutation testing with Stryker.NET
 └── README.md                 # This file
-
+```
 ##  Contact
 
 **Author:** Lusine Kazaryan  
