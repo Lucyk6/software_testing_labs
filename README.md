@@ -60,7 +60,9 @@ software-testing-labs/
 ├── Lab10-DebugTrace/         # Debug & Trace classes
 ├── Lab11-MutationTesting/    # Mutation testing with Stryker.NET
 └── README.md                 # This file
- Contact
-Author: Lusine Kazaryan
-GitHub: github.com/Lucky6
-Email: Luckykazaryan16@gmail.com
+
+##  Contact
+
+**Author:** Lusine Kazaryan  
+**GitHub:** [github.com/Lucky6](https://github.com/Lucky6)  
+**Email:** [Luckykazaryan16@gmail.com](mailto:Luckykazaryan16@gmail.com)
