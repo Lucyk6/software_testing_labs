@@ -1,69 +1,87 @@
-#  Software Testing Laboratories
+# 🚀 Task Management System — RESTful API
 
-Welcome to my personal portfolio of laboratory works for the course  
-**"Software Testing and Debugging"**.
-
-This repository is a complete walkthrough of modern software testing techniques, from manual debugging to automated mutation testing.  
-All projects are written in **C#** using **.NET Core** and industry-standard testing frameworks.
+A robust, production-ready REST API built with **ASP.NET Core** and **Entity Framework Core**, using **PostgreSQL** as the primary database. This project showcases clean architecture, secure data management, and relational database design.
 
 ---
 
-## 📚 Course Content
+## 🛠️ Tech Stack & Architecture
 
-| #  | Topic                                       | Tools / Technologies          |
-|----|---------------------------------------------|-------------------------------|
-| 1  | Debugging in IDE                            | Visual Studio / Rider         |
-| 2  | Black-Box Testing                           | C#, NUnit                     |
-| 3  | White-Box Testing                           | C#, NUnit, Code Coverage      |
-| 4  | Data-Driven Unit Testing                    | C#, NUnit, TestCase           |
-| 5  | Grey-Box Testing                            | C#, NUnit                     |
-| 6  | Unit Testing of OOP Programs                | C#, NUnit                     |
-| 7  | Test Doubles (Stubs, Mocks, Spies, Fakes)   | C#, NUnit                     |
-| 8  | Dynamic Mock Creation (NSubstitute)         | C#, NUnit, NSubstitute        |
-| 9  | Fluent Assertions                           | C#, NUnit, FluentAssertions   |
-| 10 | Programmatic Debugging (Debug & Trace)      | C#                            |
-| 11 | Mutation Testing (Stryker.NET)              | C#, NUnit, Stryker.NET        |
+* **Backend Framework:** ASP.NET Core Web API (.NET 8 / .NET 9)
+* **ORM / Data Access:** Entity Framework Core (EF Core)
+* **Database:** PostgreSQL (with Npgsql provider)
+* **Design Patterns:** Repository Pattern, Dependency Injection (DI), Async/Await asynchronous programming
+* **Testing & Tools:** Swagger UI / Postman (API Documentation), Database Migrations
 
 ---
 
-## 🛠️ Tech Stack
+## 💡 Key Architectural Concepts Implemented
 
-- **Language:** C#, .NET Core  
-- **Testing Frameworks:** NUnit, NUnit Test Adapter  
-- **Mocking:** NSubstitute  
-- **Assertions:** Fluent Assertions  
-- **Code Coverage:** AxoCover / OpenCover  
-- **Mutation Testing:** Stryker.NET  
-- **IDE:** VS Code / Visual Studio / JetBrains Rider
+* **Dependency Injection (DI):** Decoupled architecture where the `ApplicationDbContext` is properly configured via `Program.cs` and injected into controllers/services.
+* **Database Configuration (`DbContextOptions`):** Clean separation of infrastructure settings. Connection strings are securely handled via environment variables and `appsettings.json`, then passed down to the base `DbContext`.
+* **Data Integrity & Relationships:** Implemented strict one-to-many and many-to-many database relationships (e.g., Users have many Tasks, Tasks belong to Projects) with cascading delete rules.
+* **Async/Await Workflows:** Fully asynchronous database operations (`ToListAsync`, `SaveChangesAsync`, etc.) to maximize server throughput and responsiveness.
 
--
+---
 
-How to Run the Tests
+## 📁 Project Structure
 
-Clone the repository and run the following commands inside any lab folder:
+```hlb
+TaskManagementAPI/
+├── Controllers/            # API Endpoints (Handling HTTP requests)
+├── Data/
+│   ├── ApplicationDbContext.cs  # EF Core Database Context config
+│   └── Migrations/         # Auto-generated DB schema tracking files
+├── Models/                 # Database Domain Entities (User, Task, Project)
+├── DTOs/                   # Data Transfer Objects (Request/Response contracts)
+├── appsettings.json        # Configuration & Connection Strings
+└── Program.cs              # Application entry point & DI container setup
+```
+
+---
+
+## 🛠️ Database Setup & Configuration
+
+### 1. Prerequisite
+Ensure you have a running PostgreSQL instance and a valid Connection String specified in your `appsettings.json`:
+
+```json
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Host=localhost;Database=TaskDb;Username=postgres;Password=your_secure_password"
+  }
+}
+```
+
+### 2. Running Migrations
+To generate and apply the database schema, run the following commands in the Package Manager Console or Terminal:
+
+```bash
+# Add a new migration tracking changes
+dotnet ef migrations add InitialCreate
+
+# Apply migrations directly to your PostgreSQL database
+dotnet ef database update
+```
+
+---
+
+## 🚀 Getting Started
+
+1. Clone this repository locally.
+2. Navigate to the project root directory.
+3. Run the application using the .NET CLI:
 
 ```bash
 dotnet restore
-dotnet test
-## 📁 Repository Structure
-
+dotnet run
 ```
-software-testing-labs/
-├── Lab01-Debugging/          # IDE debugging skills
-├── Lab02-BlackBox/           # Black-box testing
-├── Lab03-WhiteBox/           # White-box testing
-├── Lab04-DataDriven/         # Data-driven testing
-├── Lab05-GreyBox/            # Grey-box testing
-├── Lab06-UnitTesting/        # Unit testing of OOP
-├── Lab07-TestDoubles/        # Test Doubles (Stub, Mock, Spy, Fake)
-├── Lab08-NSubstitute/        # Dynamic mocks with NSubstitute
-├── Lab09-FluentAssertions/   # Fluent Assertions library
-├── Lab10-DebugTrace/         # Debug & Trace classes
-├── Lab11-MutationTesting/    # Mutation testing with Stryker.NET
-└── README.md                 # This file
-```
-##  Contact
 
-**Author:** Lusine Kazaryan  
-**GitHub:** [github.com/Lucky6](https://github.com/Lucky6)  
-**Email:** [Luckykazaryan16@gmail.com](mailto:Luckykazaryan16@gmail.com)
+4. Once started, navigate to `http://localhost:5000/swagger` (or the port specified in your console) to explore and test the endpoints interactively via **Swagger UI**.
+
+---
+
+## ✉️ Contact & Feedback
+
+* **Author:** Lusine Kazaryan  
+* **GitHub:** [@Lucky6](https://github.com/Lucky6)  
+* **Email:** Luckykazaryan16@gmail.com
