@@ -1,4 +1,4 @@
- Software Testing Laboratories
+#  Software Testing Laboratories
 
 Welcome to my personal portfolio of laboratory works for the course  
 **"Software Testing and Debugging"**.
@@ -6,8 +6,9 @@ Welcome to my personal portfolio of laboratory works for the course
 This repository is a complete walkthrough of modern software testing techniques, from manual debugging to automated mutation testing.  
 All projects are written in **C#** using **.NET Core** and industry-standard testing frameworks.
 
+---
 
- 📚 Course Content
+## 📚 Course Content
 
 | #  | Topic                                       | Tools / Technologies          |
 |----|---------------------------------------------|-------------------------------|
@@ -23,9 +24,9 @@ All projects are written in **C#** using **.NET Core** and industry-standard tes
 | 10 | Programmatic Debugging (Debug & Trace)      | C#                            |
 | 11 | Mutation Testing (Stryker.NET)              | C#, NUnit, Stryker.NET        |
 
+---
 
-
- 🛠️ Tech Stack
+## 🛠️ Tech Stack
 
 - **Language:** C#, .NET Core  
 - **Testing Frameworks:** NUnit, NUnit Test Adapter  
@@ -33,8 +34,17 @@ All projects are written in **C#** using **.NET Core** and industry-standard tes
 - **Assertions:** Fluent Assertions  
 - **Code Coverage:** AxoCover / OpenCover  
 - **Mutation Testing:** Stryker.NET  
-- **IDE:** VS Code 
+- **IDE:** VS Code / Visual Studio / JetBrains Rider
 
+-
+
+How to Run the Tests
+
+Clone the repository and run the following commands inside any lab folder:
+
+```bash
+dotnet restore
+dotnet test
 📁 Repository Structure
 text
 software-testing-labs/
@@ -50,8 +60,7 @@ software-testing-labs/
 ├── Lab10-DebugTrace/         # Debug & Trace classes
 ├── Lab11-MutationTesting/    # Mutation testing with Stryker.NET
 └── README.md                 # This file
-
-📫 Contact
+ Contact
 Author: Lusine Kazaryan
-GitHub: github.com/Lucyk6
-Email: Lucykazaryan16@gmail.com
+GitHub: github.com/Lucky6
+Email: Luckykazaryan16@gmail.com
