@@ -77,7 +77,6 @@ dotnet test
 
 * **Author:** Lusine Kazaryan  
 * **GitHub:** [@Lucky6](https://github.com/Lucky6)  
-* **Email:** Luckykazaryan16@gmail.com
 
 ---
 
